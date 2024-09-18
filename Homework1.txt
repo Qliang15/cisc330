@@ -1,0 +1,28 @@
+1. What is HTML? What does it do?
+HTML creates the structure of the pages and allows users to interact with it.
+
+2. What is CSS? What does it do?
+CSS is in changes of the look and aspects of the webpage and HTL
+
+3. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user.
+This webpage allows users to access their personal information and view multiple types of information. For example courses, GPA, financial aid, contact, etc. 
+
+4. What is an HTML element? Tag? Attribute?
+HTML elements are collections of the start and end tags with the content inserted between them. Tags are like containers, and attributes tell us more about elements. Attributes give more information about the content of the element. 
+
+5. What are the parts of a CSS rule?
+It contains two parts, a selector and a declaration.
+
+6. Explain how CSS rules cascade.
+CSS cascade by applying the following results in order: specificity, inheritance, last rule and importance.
+
+
+7. If you have a directory called project-1 that contains two subdirectories, html-files and
+images. In the html-files directory you have an HTML file called html-1.html that has an img element with a src attribute, write out the value of the src attribute to access an image file called pinecone.jpg in the images directory.
+
+<img src="../images/pinecone.jpg" alt="Pinecone">
+
+
+8. What is the default behavior when submitting a HTML form?
+
+When submitting an HTML form, it sends the data to the URL in the action attribute using the method in the method attribute . If there's no action, it just reloads the same page.
