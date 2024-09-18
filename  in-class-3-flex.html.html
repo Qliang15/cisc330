@@ -1,0 +1,35 @@
+
+<html>
+<head>
+  <title>flexbox</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-child">div1</div>
+        <div class="flex-child">div2</div>
+        <div class="flex-child">div3</div>
+        <div class="flex-child">div4</div>
+    </div>
+    
+    <style>
+        .flex-child {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            background-color: blue;
+            color: white;
+            display: flex;
+
+        }
+        .flex-container {
+            width: 1000px;
+            border: 1px solid blue;
+            margin: 10px;
+            display: flex;
+     
+            flex-wrap: wrap;
+        }
+    </style>
+</body>
+</html>
