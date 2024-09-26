@@ -1,0 +1,11 @@
+Compare and contrast Flexbox and CSS grid, how are they alike and how are they different?
+
+Similarity
+-Both Flexbox and Grid are for making websites that adjust well to different screen sizes
+-Flexbox and Grid are newer ways to design layouts, and browsers support them really well now.
+-They both let you control the size, alignment, and spacing of items in a container, so things look good no matter the device size.
+Difference 
+-Flexbox gives a control mainly over how items line up in one direction (either row or column). For example: where it starts and ends.
+-CSS Grid gives you more control because you can adjust both rows and columns at the same time, making it easier to create complex designs.
+-Flexbox is more focused on how the content inside items adjusts based on the available space.
+-CSS Grid is more about defining the layout first and then fitting items into that layout.

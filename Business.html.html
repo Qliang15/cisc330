@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        @media (min-width: 500px) {
+            .flex-container {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 499px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+    </div>
+</body>
+</html>
