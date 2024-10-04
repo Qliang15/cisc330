@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+      .container-color {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="html-event-handler" onclick="htmlDOMReact()">
+      html event handler
+    </div>
+
+    <div id="dom-event-handler">
+      dom event handler
+    </div>
+
+    <div id="event-listener">
+      event listener
+    </div>
+
+    <div id="container-div">
+      <div id="child-div">
+        event flow
+      </div>
+    </div>
+
+    <form id="form">
+      <input id="name" type="text" name="text">
+      <input type="submit" value="Submit">
+    </form>
+
+    <button id="event-button">Click me</button>
+
+    <script>
+      function htmlDOMReact() {
+        console.log('HTML event handler clicked!');
+      }
+
+      function domEventHandlerReact(e) {
+        console.log(e);
+        console.log('DOM event handler clicked!');
+      }
+      document.getElementById('dom-event-handler').onclick = domEventHandlerReact;
+
+      document.getElementById('event-listener').addEventListener('click', function (e) {
+        console.log('Event listener clicked!');
+      });
+
+      window.addEventListener('load', function (e) {
+        console.log("Page fully loaded");
+
+        var containerDiv = document.getElementById('container-div');
+        
+        var textNode = document.createTextNode('in class 5');
+        containerDiv.appendChild(textNode);
+
+        containerDiv.classList.add('container-color');
+      });
+
+      document.getElementById('event-button').addEventListener('click', function () {
+        var containerDiv = document.getElementById('container-div');
+
+        var appendDiv = document.createElement('div');
+        var appendDivText = document.createTextNode('new text');
+        appendDiv.appendChild(appendDivText);
+
+        containerDiv.appendChild(appendDiv);
+
+        console.log('New div with "new text" added.');
+      });
+
+      document.getElementById('container-div').addEventListener('click', function (e) {
+        console.log('Container div clicked!');
+      });
+      document.getElementById('child-div').addEventListener('click', function (e) {
+        console.log('Child div clicked!');
+        e.stopPropagation();
+      });
+
+      const nameElement = document.getElementById('name');
+      document.getElementById('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        console.log('Form submitted with value: ' + nameElement.value);
+      });
+    </script>
+  </body>
+</html>
