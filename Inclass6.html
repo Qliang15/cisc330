@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX with Recipes</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <button id="ajax-get">
+        Fetch Recipes
+    </button>
+
+    <div id="recipes-container"></div>
+
+    <script>
+        $('#ajax-get').on('click', function () {
+            $.get({
+                url: 'http://localhost:3000/recipes',
+                success: function (data) {
+                    console.log(data);
+                    
+                    let recipesHtml = '';
+                    data.forEach(function(recipe) {
+                        recipesHtml += `<h2>${recipe.title}</h2><p>${recipe.description}</p>`;
+                    });
+
+                    $('#recipes-container').html(recipesHtml);
+                },
+                error: function() {
+                    console.log("Error: Unable to fetch recipes.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
