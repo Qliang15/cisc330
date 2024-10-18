@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Temperature in NYC</h1>
+    <p id="temperature">Loading...</p>
+
+    <script>
+        $(document).ready(function() {
+            const apiUrl = 'https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.0060&hourly=temperature_2m&current_weather=true';
+
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                success: function(data) {
+                    const temperature = data.current_weather.temperature;
+                    $('#temperature').text(`The current temperature is ${temperature}°F at 2 meters above ground.`);
+                },
+                error: function(error) {
+                    $('#temperature').text('Unable to fetch temperature data.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
