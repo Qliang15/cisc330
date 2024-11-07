@@ -1,0 +1,6 @@
+<?php
+$router->get('/posts', 'PostController@index');
+$router->get('/posts/create', 'PostController@create');
+$router->post('/posts/store', 'PostController@store');
+$router->get('/posts/search', 'PostController@search');
+
