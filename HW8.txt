@@ -1,0 +1,19 @@
+	1.	Write a query string with 2 values for www.example.com:
+
+www.example.com?param1=value1&param2=value2
+
+
+	2.	What does escaping a character mean?
+	•	Escaping a character means treating special characters as regular text. For example, spaces in URLs become %20.
+	3.	HTTP status codes and meanings:
+	•	200 OK: Request succeeded.
+	•	400 Bad Request: The request has errors.
+	•	401 Unauthorized: Login required.
+	•	403 Forbidden: Access denied.
+	•	404 Not Found: Resource not found.
+	•	500 Internal Server Error: Server had a problem.
+	4.	Why validate data?
+	•	To keep data accurate, prevent errors, and protect against attacks.
+	5.	What are sessions and cookies?
+	•	Sessions: Temporary data on the server to track user activity, like staying logged in.
+	•	Cookies: Small bits of data stored in the browser to remember things, like preferences or login info.
