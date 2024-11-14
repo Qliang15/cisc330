@@ -1,0 +1,13 @@
+
+	1.	What’s SQL? MySQL? And what’s a relational database?
+SQL is the language we use to talk to databases. MySQL is one of the popular systems that runs on SQL. A relational database organizes info into tables, making it easy to connect related data, like linking customers with their orders.
+	2.	What’s normalization in SQL?
+Normalization is all about tidying up data. It’s the process of structuring things to cut out duplicates and keep things organized, so everything’s easy to manage and there’s no mess.
+	3.	What’s a primary key vs. a foreign key?
+A primary key is a unique ID for each row in a table. A foreign key, on the other hand, is a way to link one table to another—like connecting an “orders” table to a “customers” table.
+	4.	What are the three types of relationships?
+	•	One-to-One: One record in a table connects to one record in another.
+	•	One-to-Many: One record connects to many in another table, like a single customer with multiple orders.
+	•	Many-to-Many: Multiple records link to multiple records, like students and classes where each student can be in many classes and each class has many students.
+	5.	What’s the difference between a left join and an inner join?
+A left join gives you everything from the left table, even if there’s no match on the right. An inner join only gives you rows where there’s a match in both tables.
