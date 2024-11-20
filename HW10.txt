@@ -1,0 +1,17 @@
+1. What are PDOs? What is a DSN?
+PODs are php data objects, a built in class that comes packaged with PHP to make it very easy for you to interact. DSN is the data source name and the connection details you need to connect to your database. 
+
+2. What are .env files? What are .gitignore files?
+.env file is where we use to keep sensitive data info like database passwords or API keys. 
+.gitinore file tells git to track these files.
+
+3. Should you ever upload passwords of any kind to github?
+
+No, API keys, or any sensitive info to GitHub. If you do, someone might find it and use it to hack into your system. Always keep those details in your .env file or some kind of secure storage, and make sure they’re excluded from Git using .gitignore
+
+4. What is SQL injection?
+SQL injection is when a hacker runs malicious codes in the database. 
+
+5. What are prepared statements? How can we pass variables to a prepared statement
+Prepared statements are like a safer way to run SQL queries. They let you write the query first with placeholders (like :username) and then pass in the actual values separately.  This makes it impossible for hackers to inject malicious codes because the database knows it’s just data, not a command. 
+
